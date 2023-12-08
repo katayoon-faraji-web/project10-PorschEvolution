@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="icon/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="icon/fontello-icons/css/fontello.css">
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+    </style>
+   
+</head>
+<body class="font-primary">
+    <main id="_main" class="w-[100%] h-[100vh] overflow-y-scroll transition-all duration-700 ease-in-out" >
+        <div class="w-full flex justify-start items-center fixed bottom-[2%] left-[2%] z-50">
+            <figure  class="w-[50px] h-[50px] overflow-hidden bg-red-600 flex justify-center items-center"><img id="mute" data-mute ='off' class="w-[80%] h-[80%] object-contain" src="img/mute_off.png" alt=""></figure>
+        </div>
+
+        <section id="holder" class="w-full ">
+            <section id="main_page" class="w-full h-[100vh] relative left-0 bg-[url('../img/main_page.jpg')] bg-cover bg-fixed">
+                <div class="w-full flex justify-end items-center">
+                    <figure id="logo" class="w-[100px] overflow-hidden"><img class="w-full h-full object-cover" src="img/logo.png" alt=""></figure>
+                </div>
+                <div class="w-full h-[70%] flex flex-wrap justify-center content-between">
+                    <div class="w-full flex flex-wrap justify-start content-center mx-32">
+                        <h1 class="flex w-fit  h-fit text-[30px] text-red-600 uppercase">PORSCHE</h1>
+                        <h2 class="flex w-fit  h-fit text-[30px] text-slate-500">volution</h2>
+                        <p class="w-full text-start text-[15px] text-slate-500">Turn up the volume to enjoy full experience</p>
+                    </div>
+                    <button id="btn1" class="w-[250px] h-[60px]  text-red-600 text-[20px] border-2 border-red-600 hover:bg-red-600 hover:text-white transition-all duration-300">START EXPREINCE</button>
+                </div>
+                <nav id="nav" class="w-[100px] fixed top-[20%] left-0 z-50 hidden  ml-5">
+                    <ul class="w-full flex flex-wrap justify-start content-between">
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='intro'>intro</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1930s'>1930s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1940s'>1940s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1950s'>1950s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1960s'>1960s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1970s'>1970s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1980s'>1980s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='1990s'>1990s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='2000s'>2000s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='2010s'>2010s</button></li>
+                        <li class="w-full h-[40px] border-b-2 border-b-slate-400 text-center flex items-center justify-center text-white transition-all duration-700"><button data-name ='2020s'>2020s</button></li>
+                    </ul>
+                </nav>
+                <audio data-status="off" id="startsound" autoplay>
+                    <source src="sounds/start.ogg" type="audio/ogg">
+                    <source src="sounds/start.mp3" type="audio/mp3">
+                </audio>
+            </section>
+            
+            <div id="intro" class="w-full h-[100vh] relative left-0 bg-[url('../img/intro.jpg')] bg-cover bg-fixed top-0">
+                <audio id="1920sound" loop  autoplay>
+                    <source src="sounds/1920.ogg" type="audio/ogg">
+                    <source src="sounds/1920.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">Ferdinand Porsche</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    
+                    <p class="text-[15px] text-white text-center w-[50%] ">The history of Porsche goes back to 1875 - the birth year of Ferdinand Porsche. It is he who laid the foundations for a unique company with strong ideals.</p>
+                </div>
+            </div>
+
+            <div id="1930s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax1.jpg')] bg-cover bg-fixed">
+                <audio id="1930sound" loop  autoplay>
+                    <source src="sounds/1930.ogg" type="audio/ogg">
+                    <source src="sounds/1930.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    
+                    <h2 class="text-[25px] w-full text-center text-black ">1930s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-black text-center w-[50%] ">Type 64 Racing Coupé: Built for long-distance ‘Berlin–Rom-Wagen’ endurance
+                        competition. Considered the forefathers of all later Porsche sports cars.</p>
+                </div>
+            </div>
+
+            <div id="1940s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax2.jpg')] bg-cover bg-fixed">
+                <audio id="1940sound" loop  autoplay>
+                    <source src="sounds/1940.ogg" type="audio/ogg">
+                    <source src="sounds/1940.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">1940s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-white text-center w-[50%] ">356 Speedster: Porsche's first production automobile started in Gmünd
+                        in Austria, where only 49 of these aluminum Porsches were built.</p>
+                </div>
+            </div>
+
+            <div id="1950s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax3.jpg')] bg-cover bg-fixed">
+                <audio id="1950sound" loop  autoplay>
+                    <source src="sounds/1950.ogg" type="audio/ogg">
+                    <source src="sounds/1950.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-black ">1950s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-black text-center w-[50%] ">356 Carrera Cabriolet: Shortly before Porsche celebrated 10th anniversary
+                        of 356 model, 356 had developed into one of the world’s most respected sports cars.</p>
+                </div>
+            </div>
+
+            <div id="1960s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax4.jpg')] bg-cover bg-fixed">
+                <audio id="1960sound" loop  autoplay>
+                    <source src="sounds/1960.ogg" type="audio/ogg">
+                    <source src="sounds/1960.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">1960s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-white text-center w-[50%] ">901: Successor of Porsche 356. Between 14 September and 16 November 1964,
+                        82 cars were built. Due to Peugeot was renamed to 911.</p>
+                </div>
+            </div>
+
+            <div id="1970s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax5.jpg')] bg-cover bg-fixed">
+                <audio id="1970sound" loop  autoplay>
+                    <source src="sounds/1970.ogg" type="audio/ogg">
+                    <source src="sounds/1970.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">1970s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-white text-center w-[50%] ">911 Turbo: At the Paris Auto Show Porsche presents the 911 Turbo – the world’s first
+                        production sports car with exhaust turbocharger and pressure regulator.</p>
+                </div>
+            </div>
+
+            <div id="1980s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax6.jpg')] bg-cover bg-fixed">
+                <audio id="1980sound" loop  autoplay>
+                    <source src="sounds/1980.ogg" type="audio/ogg">
+                    <source src="sounds/1980.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-black ">1980s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-black text-center w-[50%] ">911 Carrera Speedster: In 1984 the 911 celebrated it's 20th birthday. It had a lower and
+                        flatter windscreen and a simpler manual top that folded beneath a fiberglass cover.</p>
+                </div>
+            </div>
+
+            <div id="1990s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax7.jpg')] bg-cover bg-fixed">
+                <audio id="1990sound" loop  autoplay>
+                    <source src="sounds/1990.ogg" type="audio/ogg">
+                    <source src="sounds/1990.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">1990s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-white text-center w-[50%] ">911: It’s got classic lines, albeit updated with plastic bumpers,
+                        with modern technology such as 4x4 ABS and electronic heating.</p>
+                </div>
+            </div>
+
+            <div id="2000s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax8.jpg')] bg-cover bg-fixed">
+                <audio id="2000sound" loop  autoplay>
+                    <source src="sounds/2000.ogg" type="audio/ogg">
+                    <source src="sounds/2000.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">2000s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-white text-center w-[50%] ">911: The sixth generation of the 911 series' the new 911 Turbo with 480PS
+                        six-speed manual transmission requires 3.9 seconds from 0 to 100 km/h.</p>
+                </div>
+            </div>
+
+            <div id="2010s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax9.jpg')] bg-cover bg-fixed">
+                <audio id="2010sound" loop  autoplay>
+                    <source src="sounds/2010.ogg" type="audio/ogg">
+                    <source src="sounds/2010.mp3" type="audio/mp3">
+                </audio>
+                
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-white ">2010s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-white text-center w-[50%] ">911 Carrera 4S Coupe: The iconic Porsche 911 sports car celebrates its 50th birthday in 2013. Today's 911 still has many stories to tell. Of heroic race victories, iconic deisgn, childhood dreams. And of a timeless idea.</p>
+                </div>
+            </div>
+            
+            <div id="2020s" class="w-full h-[100vh] relative left-0 bg-[url('../img/ax10.jpg')] bg-cover bg-fixed">
+                <audio id="2020sound" loop  autoplay>
+                    <source src="sounds/2020.ogg" type="audio/ogg">
+                    <source src="sounds/2020.mp3" type="audio/mp3">
+                </audio>
+                <div class="head_text w-[80%] flex justify-center flex-wrap content-between h-[15%] absolute top-[5%] left-[11%] opacity-0 transition-all duration-700">
+                    <h2 class="text-[25px] w-full text-center text-black ">2020s</h2>
+                    <div class="w-full flex justify-center items-center"><span class="w-[30px] h-[4px] bg-red-600  text-center"></span></div>
+                    <p class="text-[15px] text-black text-center w-[50%] ">The 911.
+                        Tradition Future.
+                        Since 1963.</p>
+                </div>
+            </div>
+            <div id="footer" class="w-full h-[100vh] relative left-0 bg-black flex flex-wrap justify-center content-center">
+                <strong class="w-full h-20%  flex justify-center items-center text-center text-[25px] p-4 text-white">Created by Ondrejhomola.com</strong>
+                <strong class="w-full h-20%  flex justify-center items-center text-center text-[25px] p-4 text-white">Developed by katayoon faraji</strong>
+                <strong class="w-full h-20%  flex justify-center items-center text-center text-[40px] p-4 text-white mt-10">Contact Me</strong>
+                <section class="w-[40%] h-[50%] px-10">
+                    <ul class="h-full w-full flex flex-wrap justify-center content-center">
+                        <li class=" w-full h-[40px] my-2 text-white text-[20px] text-start flex justify-center bg-blue"><a class="text-white mx-4" href="https://www.linkedin.com/in/katayoon-faraji-web-3b722b207"><i class="text-[20px] md:text-[30px] bi bi-linkedin"></i> Linkedin : katayoon-faraji-web</a></li>
+                        <li class=" w-full h-[40px] my-2 text-white text-[20px] text-start flex justify-center bg-blue"><a class="text-white mx-4" href="https://github.com/katayoon-faraji-web"><i class="text-[20px] md:text-[30px] bi bi-github"></i> Github : katayoon-faraji-web</a></li>
+                        <li class=" w-full h-[40px] my-2 text-white text-[20px] text-start flex justify-center bg-blue"><a class="text-white mx-4" href="https://instagram.com/katayoon_faraji_web"><i class="text-[20px] md:text-[30px] icon-instagram"></i> Instagram : katayoon_faraji_web</a></li>
+                        <li class=" w-full h-[40px] my-2 text-white text-[20px] text-start flex justify-center bg-blue"><a class="text-white mx-4" href="mailto:farajikatayoon75@gmail.com"><i class="text-[20px] md:text-[30px] bi bi-envelope-fill"></i> Gmail : farajikatayoon75@gmail.com</a></li>
+                    </ul>
+                    
+                </section>                
+            </div>
+            
+        </section>
+    </main>
+
+    <script>
+        const mute_pics = ['mute_off.png','mute_on.png']
+        let _main = document.getElementById('_main')
+        let main_page = document.getElementById('main_page')
+        let _holder = document.getElementById('holder')
+        let sliders = document.querySelectorAll('#holder>div')
+        let _nav = document.getElementById('nav')
+        let start_btn = document.getElementById('btn1')
+        let btns = document.querySelectorAll('#nav>ul>li>button')
+        let _sounds =  document.querySelectorAll('#holder audio')
+        let playnow = document.getElementById('playnow')
+        let mute = document.getElementById('mute')
+        let head_texts = document.querySelectorAll('.head_text')
+        let count = 1
+        let turn = 0
+        _holder.style.height = (715*13)+'px'
+        _main.style.overflow = 'hidden'
+        main_page.style.height = 0
+        sliders[0].style.top = 0
+        sliders.forEach((val)=>{
+            let _offsettop = val.offsetTop
+            val.setAttribute('data-offsettop',_offsettop)
+            
+        })
+        main_page.style.height = '714px'
+
+        start_btn.addEventListener('click',(e)=>{
+            _main.style.overflowY = 'scroll'
+            main_page.style.transition = '2s'
+            main_page.style.height = 0
+            _sounds[0].play()
+            _main.scrollTop = 5
+            setTimeout(() => {
+                _nav.style.display = 'flex'
+            }, '1000');
+            style_btns_and_texts(5)
+
+            _main.addEventListener('scroll',(e)=>{
+                let st = e.target.scrollTop
+                let sh = e.target.scrollHeight
+               
+                _nav.style.display = 'flex'
+                btn_reset()
+                check_sliders(st)
+                check_btns(st)
+                style_btns_and_texts(st)
+                check_music()    
+            })
+        })
+
+        function style_btns_and_texts(st){
+            console.log(turn);
+            if(((st+100>(sliders[1].getAttribute('data-offsettop'))) && (st+100<(sliders[2].getAttribute('data-offsettop')))) || ((st+100>(sliders[3].getAttribute('data-offsettop'))) && (st+100<(sliders[4].getAttribute('data-offsettop')))) || ((st+100>(sliders[6].getAttribute('data-offsettop'))) && (st+100<(sliders[7].getAttribute('data-offsettop')))) || ((st+100>(sliders[10].getAttribute('data-offsettop')))&&(st+100<(sliders[11].getAttribute('data-offsettop'))))){
+                btns.forEach((c)=>{
+                    c.parentElement.style.color = 'black'
+                })
+            
+            }
+            else{
+                btns.forEach((c)=>{
+                    c.parentElement.style.color = 'white'
+                })
+        
+            }
+            
+            sliders.forEach((val,iii)=>{
+                if(st+300>(val.getAttribute('data-offsettop'))){
+                    btn_reset()
+                    head_texts[iii].style.opacity ='1'
+                    btns[iii].parentElement.style.scale = '1.3'
+                    btns[iii].parentElement.style.fontWeight = 'bold' 
+                }
+            })
+        }
+
+        function btn_reset(){
+            btns.forEach((j)=>{
+                j.parentElement.style.scale ='1'
+                j.parentElement.style.fontWeight = 'normal'
+            })
+            
+        }
+
+        function check_btns(st){
+            btns.forEach((v ,indd)=>{
+                v.addEventListener('click',(e)=>{
+                    sliders.forEach((m)=>{
+                        if(m.getAttribute('id') == (e.target.getAttribute('data-name'))){
+                            turn = indd
+                            _main.scrollTop = m.getAttribute('data-offsettop')
+                        }
+                        
+                    })
+                })
+            })
+        }
+
+        function check_sliders(st){
+            sliders.forEach((val ,ind)=>{
+            
+                if(st>(val.getAttribute('data-offsettop'))){
+                    turn = ind
+                    val.style.top = (st-(val.getAttribute('data-offsettop')))+'px'
+                }
+                else{
+                    val.style.top = 0
+                }
+            })
+        }
+
+        function check_music(){
+            _sounds.forEach((val)=>{
+                val.pause()
+            })
+            if((mute.getAttribute('data-mute'))=='off'){
+                _sounds[turn+1].play()
+            }
+        }
+
+        mute.addEventListener('click',(e)=>{
+            if((e.target.getAttribute('data-mute'))=='off'){
+                mute.src = 'img/'+mute_pics[1]
+                e.target.setAttribute('data-mute','on')
+            }
+            else{
+                mute.src = 'img/'+mute_pics[0]
+                e.target.setAttribute('data-mute','off')
+            }
+            check_music()
+        })
+
+
+    </script>
+    
+</body>
+</html>
